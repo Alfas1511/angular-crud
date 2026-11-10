@@ -1,0 +1,35 @@
+{
+  "employees": [
+    {
+      "eno": "1",
+      "ename": "Alfas Salim",
+      "salary": 40000,
+      "id": "6tFJ8W-06Lw"
+    },
+    {
+      "eno": "2",
+      "ename": "Ansal Salim",
+      "salary": 55000,
+      "id": "4mSW0UoiZUI"
+    },
+    {
+      "eno": "3",
+      "ename": "Muneer Sadhik",
+      "salary": 15000,
+      "id": "cTbrlfzDR2s"
+    },
+    {
+      "id": "TmlJ4CX9BFA",
+      "eno": "4",
+      "ename": "Asif Ali",
+      "salary": "30000"
+    },
+    {
+      "id": "sZMiPufJnPo",
+      "eno": "5",
+      "ename": "Ajmal",
+      "salary": "60000"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

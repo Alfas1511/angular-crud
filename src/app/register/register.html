@@ -1,0 +1,63 @@
+<h2>Enter Employee Data</h2>
+<form (ngSubmit)="register()">
+  <table border="1">
+    <tbody>
+      <input type="hidden" [(ngModel)]="id" [disabled]="isCreateMode" name="id" />
+
+      <tr>
+        <td>Employee No.</td>
+        <td>
+          <input type="text" [(ngModel)]="eno" name="eno" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>Employee Name</td>
+        <td>
+          <input type="text" [(ngModel)]="ename" name="ename" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>Employee Salary</td>
+        <td>
+          <input type="text" [(ngModel)]="salary" name="salary" />
+        </td>
+      </tr>
+
+      <tr style="text-align: center">
+        <td colspan="2">
+          <input type="submit" *ngIf="!isUpdateMode" value="Save" />&nbsp;
+          <input type="button" *ngIf="isUpdateMode" value="Update" (click)="update()" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+<hr />
+
+<h2>Employee Data</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Employee No.</th>
+      <th>Employee Name</th>
+      <th>Employee Salary</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let emp of employeeList">
+      <td>{{ emp.eno }}</td>
+      <td>{{ emp.ename }}</td>
+      <td>{{ emp.salary }}</td>
+      <td>
+        <input type="button" (click)="view(emp.id)" value="View/Edit" />&nbsp;
+        <!-- <input type="submit" (click)="update(emp.id)" value="update" />&nbsp; -->
+        <input type="submit" (click)="delete(emp.id)" value="Delete" />
+      </td>
+    </tr>
+  </tbody>
+</table>
